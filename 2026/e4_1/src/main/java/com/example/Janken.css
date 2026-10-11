@@ -1,0 +1,7 @@
+.button, .label {
+    -fx-font-size: 15px;
+}
+
+.button {
+    -fx-pref-width: 100px;
+}
