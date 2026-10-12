@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+
+<GridPane prefHeight="500.0" prefWidth="600.0" hgap="12.0" vgap="14.0"
+          stylesheets="@Janken.css" xmlns:fx="http://javafx.com/fxml/1"
+          fx:controller="com.example.JankenController">
+    <padding><Insets top="20.0" right="20.0" bottom="20.0" left="20.0"/></padding>
+    <columnConstraints>
+        <ColumnConstraints percentWidth="33.33" halignment="CENTER" hgrow="SOMETIMES"/>
+        <ColumnConstraints percentWidth="33.33" halignment="CENTER" hgrow="SOMETIMES"/>
+        <ColumnConstraints percentWidth="33.33" halignment="CENTER" hgrow="SOMETIMES"/>
+    </columnConstraints>
+    <children>
+        <Label text="3回じゃんけん" style="-fx-font-size: 22px; -fx-font-weight: bold;"
+               GridPane.columnSpan="3" GridPane.rowIndex="0"/>
+        <Label fx:id="roundLabel" GridPane.columnSpan="3" GridPane.rowIndex="1"/>
+        <Button fx:id="rockButton" text="ROCK" onAction="#rockAction"
+                GridPane.columnIndex="0" GridPane.rowIndex="2"/>
+        <Button fx:id="scissorsButton" text="SCISSORS" onAction="#scissorsAction"
+                GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+        <Button fx:id="paperButton" text="PAPER" onAction="#paperAction"
+                GridPane.columnIndex="2" GridPane.rowIndex="2"/>
+        <Label fx:id="playerLabel" GridPane.columnSpan="3" GridPane.rowIndex="3"/>
+        <Label fx:id="computerLabel" GridPane.columnSpan="3" GridPane.rowIndex="4"/>
+        <Label fx:id="judgeLabel" GridPane.columnSpan="3" GridPane.rowIndex="5"/>
+        <TextArea fx:id="historyArea" editable="false" focusTraversable="false"
+                  wrapText="true" prefRowCount="4" maxWidth="Infinity"
+                  GridPane.columnSpan="3" GridPane.rowIndex="6" GridPane.vgrow="ALWAYS"/>
+        <Label fx:id="scoreLabel" GridPane.columnSpan="3" GridPane.rowIndex="7"/>
+        <Label fx:id="summaryLabel" wrapText="true" maxWidth="Infinity"
+               GridPane.columnSpan="3" GridPane.rowIndex="8"/>
+        <Button fx:id="resetButton" text="もう一度" onAction="#resetAction"
+                GridPane.columnSpan="3" GridPane.rowIndex="9"/>
+    </children>
+</GridPane>

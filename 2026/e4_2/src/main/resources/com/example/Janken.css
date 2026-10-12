@@ -1,0 +1,11 @@
+.button, .label {
+    -fx-font-size: 15px;
+}
+
+.button {
+    -fx-pref-width: 150px;
+}
+
+.text-area {
+    -fx-font-size: 14px;
+}
