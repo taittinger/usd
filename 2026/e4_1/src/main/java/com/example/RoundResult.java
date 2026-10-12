@@ -1,4 +1,4 @@
-package e2_1;
+package com.example;
 
 public class RoundResult {
 	private HandSign playerHand;
